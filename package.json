@@ -1,0 +1,18 @@
+{
+    "name": "projeto_intermediario",
+    "version": "1.0.0",
+    "description": "Projeto intermediário desenvolvido durante as aulas de Programação Web II lecionadas pelo professor Ramon Venson.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "\u0016https://github.com/ThiagoPffer/projetoIntermediarioPPW.git"
+    },
+    "author": "Thiago Piffer",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
