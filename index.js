@@ -6,15 +6,9 @@ const PORT = process.env.PORT || 8080;
 
 app.get('/', function(req, res) {
     const url = "https://pt.wikipedia.org/wiki/Unidades_federativas_do_Brasil";
-    const estados = [];
+    var estados = [];
 
     var requisicao = axios.get(url);
-
-    // var estado {
-    //     "nome":
-    //     "capital":
-    //     "IDH":
-    // }
 
     requisicao.then(function(resposta) {
         var root = parser(resposta.data);
@@ -35,12 +29,19 @@ app.get('/', function(req, res) {
             }
         }
 
-        console.log(filteredContent[24]);
-    });
+        estados = filteredContent.map(function(value) {
+            return {
+                "nome": value[0],
+                "capital": value[2],
+                "IDH": value[9],
+                "alfabetização": value[10]
+            }
+        });
 
-    res.json(estados);
+        res.json(estados);
+    });
 });
 
 app.listen(PORT, function() {
-    console.log("Initial Commit");
+    console.log("Inicializado!");
 });
