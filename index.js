@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const parser = require('node-html-parser').parse;
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 
 app.get('/', function(req, res) {
     const url = "https://pt.wikipedia.org/wiki/Unidades_federativas_do_Brasil";
