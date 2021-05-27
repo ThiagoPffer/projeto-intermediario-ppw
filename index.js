@@ -34,7 +34,8 @@ app.get('/', function(req, res) {
                 "nome": value[0],
                 "capital": value[2],
                 "IDH": value[9],
-                "alfabetização": value[10]
+                "alfabetização": value[10],
+                "timestamp": Date.now()
             }
         });
 
